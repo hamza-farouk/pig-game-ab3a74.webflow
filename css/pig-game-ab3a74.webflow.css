@@ -1,0 +1,158 @@
+:root {
+  --reddish-purple: #bd2e35;
+  --purple: #763681;
+}
+
+.w-layout-hflex {
+  flex-direction: row;
+  align-items: flex-start;
+  display: flex;
+}
+
+.page-wrapper {
+  height: 100vh;
+  background-image: linear-gradient(
+    125deg,
+    var(--reddish-purple) 23%,
+    var(--purple)
+  );
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.game-scene {
+  width: 80%;
+  max-width: 80rem;
+  border-radius: 1rem;
+  flex-direction: row;
+  padding: 0;
+  position: relative;
+}
+
+.player-corner {
+  width: 50%;
+  height: 40rem;
+  background-color: #b97a99;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem 2rem;
+  font-size: 2rem;
+  display: flex;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.player-corner.is-active {
+  width: 50%;
+  background-color: #d9aebc;
+}
+
+.player-corner.second {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.player-corner.first {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.player-name {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.player-name.is-active {
+  font-weight: 700;
+}
+
+.player-score {
+  color: var(--reddish-purple);
+  text-align: center;
+  margin-top: 4rem;
+  padding: 10px;
+  font-size: 4rem;
+}
+
+.player-current_score-wrapper {
+  background-color: var(--reddish-purple);
+  color: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 2rem 6rem;
+  font-size: 1.5rem;
+}
+
+.player-current_text {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans,
+    sans-serif;
+  font-weight: 300;
+}
+
+.player-current_score {
+  margin-top: 1rem;
+}
+
+.player-details {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.game-details_wrapper {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.5rem 6rem;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 43%;
+  right: auto;
+}
+
+.game-details {
+  grid-column-gap: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  display: flex;
+}
+
+.icons {
+  width: 2rem;
+}
+
+.dice-holder {
+  width: 8rem;
+  height: 8.1rem;
+  position: absolute;
+  top: 25%;
+  bottom: auto;
+  left: 16%;
+  right: 0%;
+}
+
+.dice {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.dice.is-active {
+  display: block;
+}
+
+.winner {
+  background-color: dimgrey;
+}
